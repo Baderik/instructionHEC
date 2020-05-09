@@ -5,7 +5,7 @@
       "content": [
         {
           "name": "Microsoft Teams",
-          "img": "https://www.cisilion.com/wp-content/uploads/2016/05/Microsoft-Teams-Logo-copy.png",
+          "img": "https://i.ibb.co/GPLWPbx/Microsoft-Teams-Logo-copy.png",
           "href": "https://teams.microsoft.com/",
           "content": {
             "<div><a href='https://support.office.com/ru-ru/teams'>Официальная документация</a></div>": "",
@@ -115,6 +115,19 @@
           "content": {
             "<div><a href='https://www.yaklass.ru/info/spravochnyj-razdel'>Официальная документация</a></div>": "",
             "<span>Вопросы и ответы на сайте Google: <a href='https://support.google.com/docs/topic/6063584?hl=ru'>Мы тут</a></span>": ""
+          }
+        }
+      ]
+    },
+    {
+      "name":  "Рекомендации",
+      "content": [
+        {
+          "name": "Модель онлайн-урока от ДВФУ",
+          "img": "https://www.dvfu.ru/favicon-152.png",
+          "href": "https://www.dvfu.ru/",
+          "content": {
+            "<img src='https://i.ibb.co/BPJTqG0/001-pdf-io.png' alt='' class='unHover'>": ""
           }
         }
       ]

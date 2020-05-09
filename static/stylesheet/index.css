@@ -9,10 +9,6 @@ body {
     background-color: #F2F2F2;
 }
 
-img {
-    width: 100%;
-}
-
 h2 {
     font-weight: bold;
     color: #FDBB3C;
@@ -49,11 +45,16 @@ span.lvl3 {
 }
 
 img {
+    width: 100%;
     border: #F2F2F2 solid 1px;
 }
 
 img:hover {
     border: #545454 dashed;
+}
+
+img.unHover:hover {
+    border: #F2F2F2 solid 1px;
 }
 
 .openBlock {
