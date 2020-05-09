@@ -3,35 +3,32 @@ import json
 close_open_index = 1
 
 
-def convert_to_html(element_key, element_value, class_index=3):
+def convert_to_html(element, class_index=3):
     global close_open_index
-
-    is_html = element_key[0] == "<"
 
     mb = 5 - class_index
     mb = f"mb-{mb}" if mb > 0 else ""
-
     element_html = ''
 
-    if type(element_value) is dict:
-        element_html += f'''<div class="col-12 lvl{class_index} {mb}"><span class="openBlock lvl{class_index}" id="{close_open_index}">+ {element_key}</span></div>
-        <div class="col-1"></div><div class="col-11 block lvl{class_index}" id="{close_open_index}">
-        <div class="row">'''
+    if element["type"] == "list":
+        element_html += f'''<div class="col-12 lvl{class_index} {mb}">
+                <span class="openBlock lvl{class_index}" id="{close_open_index}">+ {element["name"]}</span></div>
+                <div class="col-1"></div><div class="col-11 block lvl{class_index}" id="{close_open_index}">
+                <div class="row">'''
 
         close_open_index += 1
 
-        if element_value:
-            for next_element_key, next_element_value in element_value.items():
-                element_html += convert_to_html(next_element_key, next_element_value, class_index + 1)
+        if element["content"]:
+            for next_element in element["content"]:
+                element_html += convert_to_html(next_element, class_index + 1)
 
         element_html += '</div></div>'
 
-    else:
-        if is_html:
-            element_html += element_key.replace('>', f' class="col-12 lvl{class_index} {mb}">', 1)
+    elif element["type"] == "html":
+        element_html += element["name"].replace('>', f' class="col-12 lvl{class_index} {mb}">', 1)
 
-        else:
-            element_html += f'<span class="col-12 lvl{class_index} {mb}">{element_key}</span>'
+    else:
+        element_html += f'<span class="col-12 lvl{class_index} {mb}">{element["name"]}</span>'
 
     return element_html
 
@@ -42,8 +39,8 @@ def convert_in_block_to_html(in_block):
     content = in_block["content"]
 
     if content:
-        for element_key, element_value in content.items():
-            in_block_html += convert_to_html(element_key, element_value)
+        for element in content:
+            in_block_html += convert_to_html(element)
 
     in_block_html += f'''</div></div><a href = {in_block["href"]} class="col-2">
     <img src="{in_block["img"]}" alt=""></a>'''
@@ -76,7 +73,7 @@ def generate(file_in="static/data.json", file_out="templates/index.html"):
     </head><body><div class="container">'''
 
     with open(file_in) as data:
-        data = json.loads(data.read())["main"]
+        data = json.loads(data.read())
 
     for block in data:
         main += convert_block_to_html(block)

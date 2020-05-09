@@ -1,136 +1,302 @@
-{
-  "main" : [
-    {
-      "name":  "Программное обеспечение",
-      "content": [
-        {
-          "name": "Microsoft Teams",
-          "img": "https://i.ibb.co/GPLWPbx/Microsoft-Teams-Logo-copy.png",
-          "href": "https://teams.microsoft.com/",
-          "content": {
-            "<div><a href='https://support.office.com/ru-ru/teams'>Официальная документация</a></div>": "",
-            "<ul type='circle'><h4>Важные понятия</h4><li>«Класс» в MS TEAMS называется <strong>«<em>Команда</em>»</strong></li><li>«Предмет» в MS TEAMS называется <strong>«<em>Канал</em>»</strong></li><li>«Урок» в MS TEAMS называется <strong>«<em>Собрание</em>»</strong></li></ul>": "",
-            "MS TEAMS ученику": {
-              "Как начать работу в MS TEAMS?": {
-                "<ol><li>Скачай приложение MS TEAMS по ссылке: https://products.office.com/ru-ru/microsoft-teams/download-app</li><li>На твоем рабочем столе появился значок «MS TEAMS». Кликни по нему. В открывшемся окне введи электронный адрес твойлогин@dvfu.ru. Нажми кнопку «Вход». Перед тобой откроется окно для ввода пароля от электронной почты твойлогин@dvfu.ru. Введи пароль. Нажми кнопку «Вход»</li></ol>": ""
-              },
-              "Как зайти на онлайн-урок(собрание)?": {
-                  "Способ 1:": {
-                    "<ol><li>После того как ты прошел идентификацию в MS TEAMS, перед тобой открывается окно «Команды»</li><li>Нажми на значок команды своего класса. Например, команда 11Д</li><li>Слева ты увидишь перечень каналов с названиями учебных предметов</li><li>Найди канал учебного предмета, который сейчас по расписанию. Нажмите на него. Открылось поле «Публикации»</li><li>Когда учитель начнет урок, в поле «Публикации» ты увидишь кнопку «Присоединиться». Нажми эту кнопку. Далее нажми кнопку «Присоединиться сейчас»</li><li>Ты на собрании!</li></ol>": ""
-                  },
-                  "Способ 2:": {
-                    "<ol><li>Нажми вкладку слева «Календарь»</li><li>Обрати внимание на расписание текущего дня</li><li>В назначенное время нажми на запланированное Собрание в календаре. Далее нажми на кнопку «Присоединиться». Далее – на кнопку «Присоединиться сейчас»</li><li>Ты на собрании!</li></ol>": ""
+[
+  {
+    "name":  "Программное обеспечение",
+    "content": [
+      {
+        "name": "Microsoft Teams",
+        "img": "https://i.ibb.co/GPLWPbx/Microsoft-Teams-Logo-copy.png",
+        "href": "https://teams.microsoft.com/",
+        "content": [
+          {
+            "type": "html",
+            "name": "<div><a href='https://support.office.com/ru-ru/teams'>Официальная документация</a></div>"
+          },
+          {
+            "type": "html",
+            "name": "<ul type='circle'><h4>Важные понятия</h4><li>«Класс» в MS TEAMS называется <strong>«<em>Команда</em>»</strong></li><li>«Предмет» в MS TEAMS называется <strong>«<em>Канал</em>»</strong></li><li>«Урок» в MS TEAMS называется <strong>«<em>Собрание</em>»</strong></li></ul>"
+          },
+          {
+            "type": "list",
+            "name": "MS TEAMS ученику",
+            "content": [
+              {
+                "type": "list",
+                "name": "Как начать работу в MS TEAMS?",
+                "content": [
+                  {
+                    "type": "html",
+                    "name": "<ol><li>Скачай приложение MS TEAMS по ссылке: https://products.office.com/ru-ru/microsoft-teams/download-app</li><li>На твоем рабочем столе появился значок «MS TEAMS». Кликни по нему. В открывшемся окне введи электронный адрес твойлогин@dvfu.ru. Нажми кнопку «Вход». Перед тобой откроется окно для ввода пароля от электронной почты твойлогин@dvfu.ru. Введи пароль. Нажми кнопку «Вход»</li></ol>"
                   }
-                }
+                ]
+              },
+              {
+                "type": "list",
+                "name": "Как зайти на онлайн-урок(собрание)?",
+                "content": [
+                  {
+                    "type": "list",
+                    "name": "Способ 1",
+                    "content": [
+                      {
+                        "type": "html",
+                        "name": "<ol><li>После того как ты прошел идентификацию в MS TEAMS, перед тобой открывается окно «Команды»</li><li>Нажми на значок команды своего класса. Например, команда 11Д</li><li>Слева ты увидишь перечень каналов с названиями учебных предметов</li><li>Найди канал учебного предмета, который сейчас по расписанию. Нажмите на него. Открылось поле «Публикации»</li><li>Когда учитель начнет урок, в поле «Публикации» ты увидишь кнопку «Присоединиться». Нажми эту кнопку. Далее нажми кнопку «Присоединиться сейчас»</li><li>Ты на собрании!</li></ol>"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "list",
+                    "name": "Способ 2",
+                    "content": [
+                      {
+                        "type": "html",
+                        "name": "<ol><li>Нажми вкладку слева «Календарь»</li><li>Обрати внимание на расписание текущего дня</li><li>В назначенное время нажми на запланированное Собрание в календаре. Далее нажми на кнопку «Присоединиться». Далее – на кнопку «Присоединиться сейчас»</li><li>Ты на собрании!</li></ol>"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "name": "MS TEAMS учителю",
+            "content": [
+              {
+                "type": "list",
+                "name": "Как начать работу в MS TEAMS?",
+                "content": [
+                  {
+                    "type": "html",
+                    "name": "<ol><li>Скачайте приложение MS TEAMS по ссылке: https://products.office.com/ru-ru/microsoft-teams/download-app</li><li>На Вашем рабочем столе появился значок «MS TEAMS». Кликните по нему. В открывшемся окне введите электронный адрес твойлогин@dvfu.ru. Нажмите кнопку «Вход». Перед вами откроется окно для ввода пароля от электронной почты твойлогин@dvfu.ru. Введите пароль. Нажмите кнопку «Вход»</li><li>Перед Вами открывается окно с Вашими командами. Например, команда 11Д, 10Д и Педагогический коллектив ГЭК</li><li>Откройте команду, в которой у вас запланирован урок по расписанию. Например, команда 11Д, ФМ (Роснефть)</li><li>Слева вы увидите перечень каналов с названиями учебных предметов</li><li>Найдите канал учебного предмета, который вы преподаете. Нажмите на него. Открылось поле «Публикации»</li><li>В нижней части поля «Публикации» есть окно для набора сообщений. Вы можете использовать это поле для обмена сообщениями с командой класса</li><li>Ниже окна набора сообщений есть ряд значков. Один из них отвечает за видеотрансляцию</li><li>Начать видеотрансляцию можно нажав на значок «Начать собрание» (выглядит как значок видеокамеры). Далее появится окно с вашим видео и кнопка «Начать собрание»</li><li>Начать видеотрансляцию можно нажав на значок «Начать собрание» (выглядит как значок видеокамеры). Далее появится окно с вашим видео и кнопка «Начать собрание»</li><li>Собрание началось!</li></ol>"
+                  }
+                ]
+              },
+              {
+                "type": "list",
+                "name": "Как запланировать событие?",
+                "content": [
+                  {
+                    "type": "html",
+                    "name": "<ol><li>Нажмите вкладку слева «Календарь»</li><li>Нажмите вкладку слева «Календарь»</li><li>Заполните предложенную форму. В частности:</li><li>Введите название собрания в поле «Добавить название»</li><li>Важно «Добавить обязательных участников». Это значит нужно добавить учащихся вашего класса. В поле «Добавить обязательных участников» начинайте вводить фамилии ребят. По первым буквам фамилии учащиеся будут появляться автоматически. Чтобы добавить появившуюся фамилию нажмите кнопку «Ввод» на клавиатуре</li><li>Важно «Добавить обязательных участников». Это значит нужно добавить учащихся вашего класса. В поле «Добавить обязательных участников» начинайте вводить фамилии ребят. По первым буквам фамилии учащиеся будут появляться автоматически. Чтобы добавить появившуюся фамилию нажмите кнопку «Ввод» на клавиатуре</li><li>Важно добавить канал. Например, 10Д, русский язык</li><li>Нажать кнопку в верхнем правом углу «Отправить»</li><li>Собрание запланировано! Учащиеся увидят ваше собрание в своем календаре. MS TEAMS будет периодически напоминать о собрании и Вам и учащимся</li></ol>"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "name": "Как отключить уведомления в MS TEAMS?",
+            "content": [
+              {
+                "type": "html",
+                "name": "<ol><li>Войдите в приложение MS TEAMS</li><li>В открывшемся окне приложения MS TEAMS в верхней его части есть значок Вашего личного кабинета</li><li>Нажмите на значок личного кабинета. Нажмите «Настройки»</li><li>В разделе «Настройки» нажмите раздел «Уведомления» (расположен слева)</li><li>Далее настройте уведомления по своему усмотрению</li></ol>"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name":  "Единая платформа связи",
+    "content": [
+      {
+        "name": "ЭлЖур",
+        "img": "https://i.ibb.co/7z7Qwv8/1200x630wa-removebg-preview-1-1.png",
+        "href": "https://eljur.ru/",
+        "content": [
+          {
+            "type": "html",
+            "name": "<div><a href='https://help.eljur.ru/hc/ru'>Официальная документация</a></div>"
+          },
+          {
+            "type": "list",
+            "name": "ЭлЖур ученику",
+            "content": [
+              {
+                "type": "list",
+                "name": "Как начать работу с электронным дневником «ЭлЖур>?",
+                "content": [
+                  {
+                    "type": "html",
+                    "name": "<span>Это руководство по работе, для родителей и учеников: <a href='https://eljur.ru/pdf/instr/instr_eljur_dnevnik.pdf'>Я тут</a></span>"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "name": "ЭлЖур учетилю",
+            "content": [
+              {
+                "type": "list",
+                "name": "Как прикрепить календарно-тематический план урока?",
+                "content": [
+                  {
+                    "type": "html",
+                    "name": "<iframe width='560' height='315' src='https://www.youtube.com/embed/xzbW_14U9lY' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+                  }
+                ]
+              },
+              {
+                "type": "list",
+                "name": "Как выставлять оценки?",
+                "content": [
+                  {
+                    "type": "html",
+                    "name": "<iframe width='560' height='315' src='https://www.youtube.com/embed/8t1pzZXSfNo' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+                  }
+                ]
+              },
+              {
+                "type": "list",
+                "name": "Как организовать онлайн-урок?",
+                "content": [
+                  {
+                    "type": "html",
+                    "name": "<span>Это от ЭлЖур: <a href='https://eljur.ru/pdf/instr/instr_eljur-online.pdf'>Я тут</a></span>"
+                  }
+                ]
             },
-            "MS TEAMS учетилю": {
-              "Как начать работу в MS TEAMS?": {
-                "<ol><li>Скачайте приложение MS TEAMS по ссылке: https://products.office.com/ru-ru/microsoft-teams/download-app</li><li>На Вашем рабочем столе появился значок «MS TEAMS». Кликните по нему. В открывшемся окне введите электронный адрес твойлогин@dvfu.ru. Нажмите кнопку «Вход». Перед вами откроется окно для ввода пароля от электронной почты твойлогин@dvfu.ru. Введите пароль. Нажмите кнопку «Вход»</li><li>Перед Вами открывается окно с Вашими командами. Например, команда 11Д, 10Д и Педагогический коллектив ГЭК</li><li>Откройте команду, в которой у вас запланирован урок по расписанию. Например, команда 11Д, ФМ (Роснефть)</li><li>Слева вы увидите перечень каналов с названиями учебных предметов</li><li>Найдите канал учебного предмета, который вы преподаете. Нажмите на него. Открылось поле «Публикации»</li><li>В нижней части поля «Публикации» есть окно для набора сообщений. Вы можете использовать это поле для обмена сообщениями с командой класса</li><li>Ниже окна набора сообщений есть ряд значков. Один из них отвечает за видеотрансляцию</li><li>Начать видеотрансляцию можно нажав на значок «Начать собрание» (выглядит как значок видеокамеры). Далее появится окно с вашим видео и кнопка «Начать собрание»</li><li>Начать видеотрансляцию можно нажав на значок «Начать собрание» (выглядит как значок видеокамеры). Далее появится окно с вашим видео и кнопка «Начать собрание»</li><li>Собрание началось!</li></ol>": ""
-              },
-              "Как запланировать событие?": {
-                "<ol><li>Нажмите вкладку слева «Календарь»</li><li>Нажмите вкладку слева «Календарь»</li><li>Заполните предложенную форму. В частности:</li><li>Введите название собрания в поле «Добавить название»</li><li>Важно «Добавить обязательных участников». Это значит нужно добавить учащихся вашего класса. В поле «Добавить обязательных участников» начинайте вводить фамилии ребят. По первым буквам фамилии учащиеся будут появляться автоматически. Чтобы добавить появившуюся фамилию нажмите кнопку «Ввод» на клавиатуре</li><li>Важно «Добавить обязательных участников». Это значит нужно добавить учащихся вашего класса. В поле «Добавить обязательных участников» начинайте вводить фамилии ребят. По первым буквам фамилии учащиеся будут появляться автоматически. Чтобы добавить появившуюся фамилию нажмите кнопку «Ввод» на клавиатуре</li><li>Важно добавить канал. Например, 10Д, русский язык</li><li>Нажать кнопку в верхнем правом углу «Отправить»</li><li>Собрание запланировано! Учащиеся увидят ваше собрание в своем календаре. MS TEAMS будет периодически напоминать о собрании и Вам и учащимся</li></ol>": ""
+              {
+                "type": "list",
+                "name": "Как создать тест в ЭлЖур?",
+                "content": [
+                  {
+                    "type": "html",
+                    "name": "<span>Это руководство по проверке результатов: <a href='https://eljur.ru/pdf/instr/instr_eljur_tests.pdf'>Я тут</a></span>"
+                  }
+                ]
               }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name":  "Цифровые образовательные платформы",
+    "content": [
+      {
+        "name": "ЯКласс",
+        "img": "http://s-1-linev-isk-edu54.edusite.ru/images/18112019yak.png",
+        "href": "https://www.yaklass.ru/",
+        "content": [
+          {
+            "type": "html",
+            "name": "<div><a href='https://www.yaklass.ru/info/spravochnyj-razdel'>Официальная документация</a></div>"
+          },
+          {
+            "type": "list",
+            "name": "ЯКласс ученику",
+            "content": [
+              {
+                "type": "list",
+                "name": "Как зарегистрироваться на платформе «ЯКласс»?",
+                "content": [
+                  {
+                    "type": "html",
+                    "name": "<span>Специально для вас, мы нашли эту инстркуция: <a href='https://www.yaklass.ru/p/ikt-gramotnost/registraciya/registratciia-shkolnikov-na-saite-iaklass-13845/samostoiatelnaia-registratciia-shkolnikov-na-iaklass-178225/re-2f3d6d4c-5b37-4c22-91bf-982d007573ba'>Я тут</a></span>"
+                  }
+                ]
+              },
+              {
+                "type": "list",
+                "name": "Как ученику выполнить проверочную работу?",
+                "content": [
+                  {
+                    "type": "html",
+                    "name": "<span>Здесь вы найдёте презентацию: <a href='https://www.yaklass.ru/info/testi/students-presentation'>Я тут</a></span>"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "name": "ЯКласс учетилю",
+            "content": [
+              {
+                "type": "list",
+                "name": "Как начать работу на платформе «ЯКласс»?",
+                "content": [
+                  {
+                    "type": "html",
+                    "name": "<span>Небольшой курс: <a href='https://www.yaklass.ru/p/ikt-gramotnost'>Я тут</a></span>"
+                  }
+                ]
+              },
+              {
+                "type": "list",
+                "name": "Как синхронизировать ЭлЖур и ЯКласс?",
+                "content": [
+                  {
+                    "type": "html",
+                    "name": "<span>Эта инструкция поможет вам: <a href='https://www.yaklass.ru/info/spravochnyj-razdel/vhod-cherez-elzhur'>Я тут</a></span>"
+                  }
+                ]
+              },
+              {
+                "type": "list",
+                "name": "Как создать урок на платформе «ЯКласс»?",
+                "content": [
+                  {
+                    "type": "html",
+                    "name": "<span>Небольшой курс: <a href='https://www.yaklass.ru/p/ikt-gramotnost/kurs-profi/redaktor-predmetov-sozdanie-rabochei-programmy-uchitelia-na-iaklass-18904'>Я тут</a></span>"
+                  }
+                ]
             },
-            "Как отключить уведомления в MS TEAMS?": {
-              "<ol><li>Войдите в приложение MS TEAMS</li><li>В открывшемся окне приложения MS TEAMS в верхней его части есть значок Вашего личного кабинета</li><li>Нажмите на значок личного кабинета. Нажмите «Настройки»</li><li>В разделе «Настройки» нажмите раздел «Уведомления» (расположен слева)</li><li>Далее настройте уведомления по своему усмотрению</li></ol>": ""
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name":  "Единая платформа связи",
-      "content": [
-        {
-          "name": "ЭлЖур",
-          "img": "https://i.ibb.co/7z7Qwv8/1200x630wa-removebg-preview-1-1.png",
-          "href": "https://eljur.ru/",
-          "content": {
-            "<div><a href='https://help.eljur.ru/hc/ru'>Официальная документация</a></div>": "",
-            "ЭлЖур ученику": {
-              "Как начать работу с электронным дневником «ЭлЖур>?": {
-                "<span>Это руководство по работе, для родителей и учеников: <a href='https://eljur.ru/pdf/instr/instr_eljur_dnevnik.pdf'>Я тут</a></span>": ""
+              {
+                "type": "list",
+                "name": "Как создать проверочную, тестовую или домашнюю работу?",
+                "content": [
+                  {
+                    "type": "html",
+                    "name": "<span>Инструкция на сайте: <a href='https://www.yaklass.ru/p/ikt-gramotnost/proverochnye-i-domashnie-raboty/razdel-proverochnye-raboty-v-klasse-i-distantcionno-16397/razdel-proverochnye-raboty-osnovy-17179/re-0d0ab5ea-cbfb-4c3f-ba8c-8bd2e4a8939d'>Я тут</a></span>"
+                  }
+                ]
               }
-            },
-            "ЭлЖур учетилю": {
-              "Как прикрепить календарно-тематический план урока?": {
-                "<iframe width='560' height='315' src='https://www.youtube.com/embed/xzbW_14U9lY' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>": ""
-              },
-              "Как выставлять оценки?": {
-                "<iframe width='560' height='315' src='https://www.youtube.com/embed/8t1pzZXSfNo' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>": ""
-              },
-              "Как организовать онлайн-урок?": {
-                "<span>Это от ЭлЖур: <a href='https://eljur.ru/pdf/instr/instr_eljur-online.pdf'>Я тут</a></span>": ""
-              },
-              "Как создать тест в ЭлЖур?": {
-                "<span>Это руководство по проверке результатов: <a href='https://eljur.ru/pdf/instr/instr_eljur_tests.pdf'>Я тут</a></span>": ""
-              }
-            }
+            ]
           }
-        }
-      ]
-    },
-    {
-      "name":  "Цифровые образовательные платформы",
-      "content": [
-        {
-          "name": "ЯКласс",
-          "img": "http://s-1-linev-isk-edu54.edusite.ru/images/18112019yak.png",
-          "href": "https://www.yaklass.ru/",
-          "content": {
-            "<div><a href='https://www.yaklass.ru/info/spravochnyj-razdel'>Официальная документация</a></div>": "",
-            "ЯКласс ученику": {
-              "Как зарегистрироваться на платформе «ЯКласс»?": {
-                "<span>Специально для вас, мы нашли эту инстркуция: <a href='https://www.yaklass.ru/p/ikt-gramotnost/registraciya/registratciia-shkolnikov-na-saite-iaklass-13845/samostoiatelnaia-registratciia-shkolnikov-na-iaklass-178225/re-2f3d6d4c-5b37-4c22-91bf-982d007573ba'>Я тут</a></span>": ""
-              },
-              "Как ученику выполнить проверочную работу?": {
-                "<span>Здесь вы найдёте презентацию: <a href='https://www.yaklass.ru/info/testi/students-presentation'>Я тут</a></span>": ""
-              }
-            },
-            "ЯКласс учетилю": {
-              "Как начать работу на платформе «ЯКласс»?": {
-                "<span>Небольшой курс: <a href='https://www.yaklass.ru/p/ikt-gramotnost'>Я тут</a></span>": ""
-              },
-              "Как синхронизировать ЭлЖур и ЯКласс?": {
-                "<span>Эта инструкция поможет вам: <a href='\nhttps://www.yaklass.ru/info/spravochnyj-razdel/vhod-cherez-elzhur'>Я тут</a></span>": ""
-              },
-              "Как создать урок на платформе «ЯКласс»?": {
-                "<span>Небольшой курс: <a href='https://www.yaklass.ru/p/ikt-gramotnost/kurs-profi/redaktor-predmetov-sozdanie-rabochei-programmy-uchitelia-na-iaklass-18904'>Я тут</a></span>": ""
-              },
-              "Как создать проверочную, тестовую или домашнюю работу?": {
-                "<span>Инструкция на сайте: <a href='https://www.yaklass.ru/p/ikt-gramotnost/proverochnye-i-domashnie-raboty/razdel-proverochnye-raboty-v-klasse-i-distantcionno-16397/razdel-proverochnye-raboty-osnovy-17179/re-0d0ab5ea-cbfb-4c3f-ba8c-8bd2e4a8939d'>Я тут</a></span>": ""
-              }
-            }
+        ]
+      }
+    ]
+  },
+  {
+    "name":  "Цифровые вспомогательные сервисы",
+    "content": [
+      {
+        "name": "Google сервисы",
+        "img": "https://gambitnash.co.uk/assets/uploads/2017/04/Google_-G-_Logo.svg_.png",
+        "href": "https://www.google.ru/intl/ru/docs/about/",
+        "content": [
+          {
+            "type": "html",
+            "name": "<div><a href='https://www.yaklass.ru/info/spravochnyj-razdel'>Официальная документация</a></div>"
+          },
+          {
+            "type": "html",
+            "name": "<span>Вопросы и ответы на сайте Google: <a href='https://support.google.com/docs/topic/6063584?hl=ru'>Мы тут</a></span>"
           }
-        }
-      ]
-    },
-    {
-      "name":  "Цифровые вспомогательные сервисы",
-      "content": [
-        {
-          "name": "Google сервисы",
-          "img": "https://gambitnash.co.uk/assets/uploads/2017/04/Google_-G-_Logo.svg_.png",
-          "href": "https://www.google.ru/intl/ru/docs/about/",
-          "content": {
-            "<div><a href='https://www.yaklass.ru/info/spravochnyj-razdel'>Официальная документация</a></div>": "",
-            "<span>Вопросы и ответы на сайте Google: <a href='https://support.google.com/docs/topic/6063584?hl=ru'>Мы тут</a></span>": ""
+        ]
+      }
+    ]
+  },
+  {
+    "name":  "Рекомендации",
+    "content": [
+      {
+        "name": "Модель онлайн-урока от ДВФУ",
+        "img": "https://www.dvfu.ru/favicon-152.png",
+        "href": "https://www.dvfu.ru/",
+        "content": [
+          {
+           "type": "html",
+            "name": "<img src='https://i.ibb.co/BPJTqG0/001-pdf-io.png' alt='' class='unHover'>"
           }
-        }
-      ]
-    },
-    {
-      "name":  "Рекомендации",
-      "content": [
-        {
-          "name": "Модель онлайн-урока от ДВФУ",
-          "img": "https://www.dvfu.ru/favicon-152.png",
-          "href": "https://www.dvfu.ru/",
-          "content": {
-            "<img src='https://i.ibb.co/BPJTqG0/001-pdf-io.png' alt='' class='unHover'>": ""
-          }
-        }
-      ]
-    }
-  ]
-}
+        ]
+      }
+    ]
+  }
+]
