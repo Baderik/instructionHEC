@@ -14,7 +14,8 @@
           },
           {
             "type": "html",
-            "name": "<ul type='circle'><h4>Важные понятия</h4><li>«Класс» в MS TEAMS называется <strong>«<em>Команда</em>»</strong></li><li>«Предмет» в MS TEAMS называется <strong>«<em>Канал</em>»</strong></li><li>«Урок» в MS TEAMS называется <strong>«<em>Собрание</em>»</strong></li></ul>"
+            "name": "<ul type='circle'><h4>Важные понятия</h4><li>«Класс» в MS TEAMS называется <strong>«<em>Команда</em>»</strong></li><li>«Предмет» в MS TEAMS называется <strong>«<em>Канал</em>»</strong></li><li>«Урок» в MS TEAMS называется <strong>«<em>Собрание</em>»</strong></li></ul>",
+            "telegram": "-----\n<em>Важные понятия<em>\n«Класс» в MS TEAMS называется <strong>«<em>Команда</em>»</strong>\n«Предмет» в MS TEAMS называется <strong>«<em>Канал</em>»</strong>\n>«Урок» в MS TEAMS называется <strong>«<em>Собрание</em>»</strong>\n-----"
           },
           {
             "type": "list",

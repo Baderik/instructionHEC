@@ -123,7 +123,7 @@ def generate_html(file_in="static/data.json", file_out="templates/index.html"):
     </head><body><div class="container">'''
 
     with open(file_in) as data:
-        data = json.loads(data.read())
+        data = load(data)
 
     for block in data:
         main += convert_block_to_html(block)
