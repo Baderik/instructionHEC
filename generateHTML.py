@@ -1,10 +1,13 @@
 import json
+import pprint
 
-close_open_index = 1
+close_open_html_index = 1
+telegram_index = 1
+telegram_json = {0: []}
 
 
-def convert_to_html(element, class_index=3):
-    global close_open_index
+def convert_element_to_html(element, class_index=3):
+    global close_open_html_index
 
     mb = 5 - class_index
     mb = f"mb-{mb}" if mb > 0 else ""
@@ -12,15 +15,15 @@ def convert_to_html(element, class_index=3):
 
     if element["type"] == "list":
         element_html += f'''<div class="col-12 lvl{class_index} {mb}">
-                <span class="openBlock lvl{class_index}" id="{close_open_index}">+ {element["name"]}</span></div>
-                <div class="col-1"></div><div class="col-11 block lvl{class_index}" id="{close_open_index}">
+                <span class="openBlock lvl{class_index}" id="{close_open_html_index}">+ {element["name"]}</span></div>
+                <div class="col-1"></div><div class="col-11 block lvl{class_index}" id="{close_open_html_index}">
                 <div class="row">'''
 
-        close_open_index += 1
+        close_open_html_index += 1
 
         if element["content"]:
             for next_element in element["content"]:
-                element_html += convert_to_html(next_element, class_index + 1)
+                element_html += convert_element_to_html(next_element, class_index + 1)
 
         element_html += '</div></div>'
 
@@ -40,7 +43,7 @@ def convert_in_block_to_html(in_block):
 
     if content:
         for element in content:
-            in_block_html += convert_to_html(element)
+            in_block_html += convert_element_to_html(element)
 
     in_block_html += f'''</div></div><a href = {in_block["href"]} class="col-2">
     <img src="{in_block["img"]}" alt=""></a>'''
@@ -65,7 +68,50 @@ def convert_block_to_html(block):
     return block_html
 
 
-def generate(file_in="static/data.json", file_out="templates/index.html"):
+def convert_element_to_telegram_json(element):
+    global telegram_index, telegram_json
+
+    if element["type"] != "list":
+        if element["type"] == "html":
+            return element.get("telegram", "Простите, но это информация доступна только на сайте")
+
+        return element["name"]
+
+    element_id = telegram_index
+    telegram_index += 1
+
+    telegram_json[element_id] = {"name": element["name"], "content": []}
+
+    for next_element in element["content"]:
+        telegram_json[element_id]["content"].append(convert_element_to_telegram_json(next_element))
+
+    return element_id
+
+
+def convert_in_block_to_telegram_json(in_block):
+    global telegram_index, telegram_json
+
+    in_block_id = telegram_index
+    telegram_index += 1
+
+    telegram_json[in_block_id] = {"name": in_block["name"], "content": []}
+
+    for element in in_block["content"]:
+        telegram_json[in_block_id]["content"].append(convert_element_to_telegram_json(element))
+
+    return in_block_id
+
+
+def convert_block_to_telegram_json(block):
+    content = []
+
+    for in_block in block["content"]:
+        content.append(convert_in_block_to_telegram_json(in_block))
+
+    return {"name": block["name"], "content": content}
+
+
+def generate_html(file_in="static/data.json", file_out="templates/index.html"):
     main = '''<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Инструкции</title>
     <link rel="shortcut icon" href="https://i.ibb.co/PjSGjpG/2.png" type="image/png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -90,5 +136,23 @@ def generate(file_in="static/data.json", file_out="templates/index.html"):
         return main
 
 
+def generate_telegram_json(file_in="static/data.json", file_out="static/telegram.json"):
+    global telegram_json
+
+    with open(file_in) as data:
+        data = json.loads(data.read())
+
+    for block in data:
+        telegram_json[0].append(convert_block_to_telegram_json(block))
+
+    if file_out:
+        with open(file_out, "w") as out:
+            print(telegram_json, file=out)
+
+    else:
+        return telegram_json
+
+
 if __name__ == '__main__':
-    generate()
+    generate_html()
+    generate_telegram_json()
