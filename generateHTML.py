@@ -1,9 +1,8 @@
-import json
-import pprint
+from json import load, dumps
 
 close_open_html_index = 1
 telegram_index = 1
-telegram_json = {0: []}
+telegram_json = {'0': {"content": []}}
 
 
 def convert_element_to_html(element, class_index=3):
@@ -103,12 +102,17 @@ def convert_in_block_to_telegram_json(in_block):
 
 
 def convert_block_to_telegram_json(block):
-    content = []
+    global telegram_index, telegram_json
+
+    block_id = telegram_index
+    telegram_index += 1
+
+    telegram_json[block_id] = {"name": block["name"], "content": []}
 
     for in_block in block["content"]:
-        content.append(convert_in_block_to_telegram_json(in_block))
+        telegram_json[block_id]["content"].append(convert_in_block_to_telegram_json(in_block))
 
-    return {"name": block["name"], "content": content}
+    return block_id
 
 
 def generate_html(file_in="static/data.json", file_out="templates/index.html"):
@@ -140,14 +144,14 @@ def generate_telegram_json(file_in="static/data.json", file_out="static/telegram
     global telegram_json
 
     with open(file_in) as data:
-        data = json.loads(data.read())
+        data = load(data)
 
     for block in data:
-        telegram_json[0].append(convert_block_to_telegram_json(block))
+        telegram_json['0']["content"].append(convert_block_to_telegram_json(block))
 
     if file_out:
         with open(file_out, "w") as out:
-            print(telegram_json, file=out)
+            print(dumps(telegram_json), file=out)
 
     else:
         return telegram_json
