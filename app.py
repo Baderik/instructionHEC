@@ -45,6 +45,7 @@ def instruction(message):
 
     else:
         if message.text == "На главную":
+            set_lvl(message.chat.id, 0)
             send_new_lvl_msg(0, message.chat.id)
 
         else:
